@@ -273,6 +273,52 @@
   }
   .projects-link:hover{ border-color: var(--amber); }
 
+  /* ---------- Tools ---------- */
+  .tools-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+  }
+  .tool-card{
+    display: block;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.15s ease, transform 0.15s ease, background 0.15s ease;
+    cursor: pointer;
+  }
+  .tool-card:hover, .tool-card:focus-visible{
+    border-color: var(--accent);
+    background: var(--panel-2);
+    transform: translateY(-2px);
+  }
+  .tool-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+  .tool-name{ font-weight: 700; font-size: 16px; }
+  .tool-arrow{
+    font-family: var(--mono);
+    font-size: 14px;
+    color: var(--text-dim);
+    transition: color 0.15s ease, transform 0.15s ease;
+  }
+  .tool-card:hover .tool-arrow{ color: var(--accent); transform: translate(2px, -2px); }
+  .tool-desc{ margin: 0; color: var(--text-dim); font-size: 14px; max-width: 50ch; }
+  .tool-url{
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--accent);
+    margin: 12px 0 0;
+    word-break: break-all;
+  }
+
   /* ---------- Footer / contact ---------- */
   footer{
     border-top: 1px solid var(--border);
@@ -317,6 +363,7 @@
       <a href="#skills">skills</a>
       <a href="#experience">experience</a>
       <a href="#projects">projects</a>
+      <a href="#tools">tools</a>
       <a href="#contact">contact</a>
     </nav>
   </div>
@@ -407,13 +454,33 @@
 
     <div class="exp-row">
       <div class="exp-top">
-        <div class="exp-role">AI Training &amp; Annotation <span>— Outlier / Alignerr</span></div>
+        <div class="exp-role">AI Training &amp; Annotation <span>— Outlier</span></div>
         <span class="pass">PASS</span>
       </div>
       <p class="exp-meta"><span class="fill-in">Oct, 2024 ~ Current</span></p>
       <p class="exp-desc">
-        Evaluated and annotated model outputs for AI training pipelines, applying the
-        same close-reading and edge-case instincts developed through QA work.
+        Working as a subject-matter contributor on Outlier, the Scale AI-operated platform that
+        connects experts with leading AI labs to provide the human feedback used to train and
+        evaluate large language models. Day to day this means rating, ranking, and rewriting model
+        outputs, verifying factual and code correctness, and surfacing edge cases where a response
+        looks right but isn't — the same close-reading discipline I built doing QA automation,
+        now applied to model behavior instead of application behavior. Sustained, longer-running
+        engagement here has meant working across a wider range of task types and project domains
+        over time.
+      </p>
+    </div>
+
+    <div class="exp-row">
+      <div class="exp-top">
+        <div class="exp-role">AI Training &amp; Annotation <span>— Alignerr</span></div>
+        <span class="pass">PASS</span>
+      </div>
+      <p class="exp-meta"><span class="fill-in">Oct, 2024 ~ Current</span></p>
+      <p class="exp-desc">
+        Contributing on Alignerr as a second AI training platform alongside Outlier, evaluating and
+        annotating model outputs for AI training pipelines. Shorter-term and lower-volume than the
+        Outlier work, but drawing on the same instincts: catching subtle errors, judging response
+        quality against task guidelines, and flagging edge cases in model behavior.
       </p>
     </div>
   </section>
@@ -435,6 +502,23 @@
         </p>
         <!-- <a class="projects-link fill-in" href="#">[link to repo / write-up]</a> -->
       </div>
+    </div>
+  </section>
+
+  <section class="suite" id="tools">
+    <p class="suite-label">SUITE 05</p>
+    <h2 class="suite-title">Tools</h2>
+    <div class="tools-grid">
+      <a class="tool-card" href="https://playlist-planner.yousefalsoly.workers.dev/" target="_blank" rel="noopener noreferrer">
+        <div class="tool-top">
+          <span class="tool-name">Playlist Planner</span>
+          <span class="tool-arrow" aria-hidden="true">↗</span>
+        </div>
+        <p class="tool-desc">
+          A small web tool for planning and organizing playlists, deployed on Cloudflare Workers.
+        </p>
+        <p class="tool-url">playlist-planner.yousefalsoly.workers.dev</p>
+      </a>
     </div>
   </section>
 
