@@ -2,7 +2,7 @@
 
 Personal CV / resume site for **Youssef Hesham Alsoly** — a static site, deployed on Cloudflare Workers.
 
-**Live site:** https://resume.yousefalsoly.workers.dev/
+**Live site:** <https://resume.yousefalsoly.workers.dev/>
 ___
 
 ## Contact
